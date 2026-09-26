@@ -3,21 +3,23 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#163a8a" />
     <title>Unitech Social Calendar</title>
-    <meta name="description" content="Unitech Social Calendar keeps students connected to campus events, schedules, and association updates." />
+    <meta name="description" content="The Papua New Guinea University of Technology campus events, schedules, and notifications hub." />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
   </head>
-  <body>
+  <body id="top">
     <header class="site-header">
       <div class="container nav">
-        <div class="brand" aria-label="Unitech Social Calendar home">
-          <div class="brand-mark" aria-label="Papua New Guinea University of Technology logo">
+        <a class="brand" href="#top" aria-label="Unitech Social Calendar home">
+          <span class="brand-mark" aria-hidden="true">
             <svg class="unitech-logo" viewBox="0 0 200 200" role="img" aria-label="Papua New Guinea University of Technology logo">
               <rect x="10" y="10" width="180" height="180" rx="32" fill="#b71d2d" stroke="#f5f5f5" stroke-width="12" />
-              <g fill="none" stroke="#f4f4f4" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" opacity="0.96">
+              <g fill="none" stroke="#f4f4f4" stroke-width="10" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M60 125c0-27 17-47 42-47 27 0 44 21 44 49 0 24-16 38-39 38-23 0-39-15-39-40Z" />
                 <path d="M72 84c0 18 10 30 26 30 16 0 28-12 28-30 0-18-12-30-28-30-15 0-26 12-26 30Z" />
                 <path d="M102 62c10 0 17 8 17 18 0 11-7 20-18 20-10 0-18-9-18-20 0-10 8-18 19-18Z" />
@@ -29,12 +31,12 @@
                 <path d="M130 62c-2 23-15 46-36 58" />
               </g>
             </svg>
-          </div>
-          <div>
-            <span class="brand-name">Unitech</span>
+          </span>
+          <span>
+            <strong class="brand-name">Unitech</strong>
             <small>Social Calendar</small>
-          </div>
-        </div>
+          </span>
+        </a>
 
         <nav class="nav-links" aria-label="Main navigation">
           <a href="#features">Features</a>
@@ -44,21 +46,21 @@
         </nav>
 
         <div class="nav-actions">
-          <button class="btn btn-ghost">Log in</button>
-          <button class="btn btn-primary">Create account</button>
+          <button class="btn btn-ghost" type="button">Log in</button>
+          <button class="btn btn-primary" type="button">Create account</button>
         </div>
       </div>
     </header>
 
     <main>
-      <section class="hero">
+      <section class="hero" aria-labelledby="hero-title">
         <div class="container hero-inner">
           <div class="hero-copy">
-            <div class="heading-logo-wrap">
-              <div class="heading-logo" aria-label="Papua New Guinea University of Technology logo">
+            <div class="heading-logo-wrap" aria-label="Papua New Guinea University of Technology">
+              <span class="heading-logo">
                 <svg class="unitech-logo" viewBox="0 0 200 200" role="img" aria-label="Papua New Guinea University of Technology logo">
                   <rect x="10" y="10" width="180" height="180" rx="32" fill="#b71d2d" stroke="#f5f5f5" stroke-width="12" />
-                  <g fill="none" stroke="#f4f4f4" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" opacity="0.96">
+                  <g fill="none" stroke="#f4f4f4" stroke-width="10" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M60 125c0-27 17-47 42-47 27 0 44 21 44 49 0 24-16 38-39 38-23 0-39-15-39-40Z" />
                     <path d="M72 84c0 18 10 30 26 30 16 0 28-12 28-30 0-18-12-30-28-30-15 0-26 12-26 30Z" />
                     <path d="M102 62c10 0 17 8 17 18 0 11-7 20-18 20-10 0-18-9-18-20 0-10 8-18 19-18Z" />
@@ -70,21 +72,15 @@
                     <path d="M130 62c-2 23-15 46-36 58" />
                   </g>
                 </svg>
-              </div>
+              </span>
             </div>
             <span class="eyebrow">Campus life, organized</span>
-            <h1>Stay informed about every event that matters on campus.</h1>
-            <p>
-              Unitech Social Calendar is the official event hub for students, associations,
-              and departments. Discover what is happening, plan your week, and receive
-              reminders from the groups you care about most.
-            </p>
-
+            <h1 id="hero-title">Stay informed about every event that matters on campus.</h1>
+            <p>Unitech Social Calendar is the official event hub for students, associations, and departments. Discover what is happening, plan your week, and receive reminders from the groups you care about most.</p>
             <div class="cta-row">
-              <button class="btn btn-primary">Join with @unitech.ac.pg</button>
-              <button class="btn btn-secondary">Explore the calendar</button>
+              <button class="btn btn-primary" type="button">Join with @unitech.ac.pg</button>
+              <a class="btn btn-secondary" href="#calendar">Explore the calendar</a>
             </div>
-
             <ul class="social-proof" aria-label="Platform statistics">
               <li><strong>12+</strong><span>Associations</span></li>
               <li><strong>500+</strong><span>Events this semester</span></li>
@@ -95,292 +91,52 @@
           <div class="hero-visual" aria-label="Calendar preview">
             <div class="card calendar-panel">
               <div class="calendar-header">
-                <div>
-                  <p>October 2026</p>
-                  <h3>Campus Events</h3>
-                </div>
+                <div><p>October 2026</p><h2>Campus Events</h2></div>
                 <span class="status-badge">Live</span>
               </div>
-
-              <div class="mini-calendar">
-                <span>Mon</span>
-                <span>Tue</span>
-                <span>Wed</span>
-                <span>Thu</span>
-                <span>Fri</span>
-                <span>Sat</span>
-                <span>Sun</span>
-
-                <button class="day muted">28</button>
-                <button class="day muted">29</button>
-                <button class="day muted">30</button>
-                <button class="day">1</button>
-                <button class="day">2</button>
-                <button class="day">3</button>
-                <button class="day">4</button>
-
-                <button class="day">5</button>
-                <button class="day event">6</button>
-                <button class="day">7</button>
-                <button class="day selected">8</button>
-                <button class="day event">9</button>
-                <button class="day">10</button>
-                <button class="day">11</button>
-
-                <button class="day">12</button>
-                <button class="day event">13</button>
-                <button class="day">14</button>
-                <button class="day">15</button>
-                <button class="day event">16</button>
-                <button class="day">17</button>
-                <button class="day">18</button>
+              <div class="mini-calendar" role="grid" aria-label="October 2026 event preview">
+                <span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span>
+                <button class="day muted" type="button">28</button><button class="day muted" type="button">29</button><button class="day muted" type="button">30</button><button class="day" type="button">1</button><button class="day" type="button">2</button><button class="day" type="button">3</button><button class="day" type="button">4</button>
+                <button class="day" type="button">5</button><button class="day event" type="button">6</button><button class="day" type="button">7</button><button class="day selected" type="button">8</button><button class="day event" type="button">9</button><button class="day" type="button">10</button><button class="day" type="button">11</button>
+                <button class="day" type="button">12</button><button class="day event" type="button">13</button><button class="day" type="button">14</button><button class="day" type="button">15</button><button class="day event" type="button">16</button><button class="day" type="button">17</button><button class="day" type="button">18</button>
               </div>
             </div>
-
-            <div class="floating-card upcoming">
-              <div class="floating-header">
-                <span class="chip chip-gold">Upcoming</span>
-                <span class="tiny">Today</span>
-              </div>
-              <h4>Career Mixer Night</h4>
+            <article class="floating-card upcoming">
+              <div class="floating-header"><span class="chip chip-gold">Upcoming</span><span class="tiny">Today</span></div>
+              <h3>Career Mixer Night</h3>
               <p>Student Center Atrium • 6:30 PM</p>
-              <div class="tags">
-                <span>Media Club</span>
-                <span>Networking</span>
-              </div>
-            </div>
+              <div class="tags"><span>Media Club</span><span>Networking</span></div>
+            </article>
           </div>
         </div>
       </section>
 
-      <section class="section features" id="features">
+      <section class="section features" id="features" aria-labelledby="features-title">
         <div class="container">
-          <div class="section-heading">
-            <span class="eyebrow accent">Built for student life</span>
-            <h2>Everything students need to stay on top of campus activity.</h2>
-          </div>
-
+          <div class="section-heading"><span class="eyebrow accent">Built for student life</span><h2 id="features-title">Everything students need to stay on top of campus activity.</h2></div>
           <div class="feature-grid">
-            <article class="feature-card">
-              <div class="icon-wrap blue">C</div>
-              <h3>Shared campus calendar</h3>
-              <p>Follow all official university events posted by active campus associations and departments.</p>
-            </article>
-
-            <article class="feature-card">
-              <div class="icon-wrap gold">S</div>
-              <h3>Personal schedules</h3>
-              <p>Create a weekly study and event plan that fits your academic commitments and social life.</p>
-            </article>
-
-            <article class="feature-card">
-              <div class="icon-wrap green">N</div>
-              <h3>Sticky notes</h3>
-              <p>Attach quick reminders, revision goals, or meeting notes directly to dates and plans.</p>
-            </article>
-
-            <article class="feature-card">
-              <div class="icon-wrap purple">R</div>
-              <h3>Custom reminders</h3>
-              <p>Choose which associations you want alerts from so your notifications stay relevant.</p>
-            </article>
+            <article class="feature-card"><div class="icon-wrap blue">C</div><h3>Shared campus calendar</h3><p>Follow official university events posted by active campus associations and departments.</p></article>
+            <article class="feature-card"><div class="icon-wrap gold">S</div><h3>Personal schedules</h3><p>Create a weekly study and event plan that fits your academic commitments and social life.</p></article>
+            <article class="feature-card"><div class="icon-wrap green">N</div><h3>Sticky notes</h3><p>Attach quick reminders, revision goals, or meeting notes directly to dates and plans.</p></article>
+            <article class="feature-card"><div class="icon-wrap purple">R</div><h3>Custom reminders</h3><p>Choose which associations you want alerts from so your notifications stay relevant.</p></article>
           </div>
         </div>
       </section>
 
-      <section class="section split" id="calendar">
+      <section class="section split" id="calendar" aria-labelledby="calendar-title">
         <div class="container split-inner">
-          <div class="split-copy">
-            <span class="eyebrow accent">Event discovery</span>
-            <h2>See all events in one place, without missing the important ones.</h2>
-            <p>
-              Search by association, date, type, or venue. Event details include location,
-              description, media uploads, and organizer information for quick access.
-            </p>
-            <ul class="check-list">
-              <li>Association and department event posting</li>
-              <li>Clear views for academic and social events</li>
-              <li>Media support for posters and promotional content</li>
-            </ul>
-          </div>
-
-          <div class="calendar-surface card">
-            <div class="day-row">
-              <span>Mon</span>
-              <span>Tue</span>
-              <span>Wed</span>
-              <span>Thu</span>
-              <span>Fri</span>
-              <span>Sat</span>
-              <span>Sun</span>
-            </div>
-            <div class="date-grid">
-              <button class="grid-day muted">30</button>
-              <button class="grid-day muted">31</button>
-              <button class="grid-day">1</button>
-              <button class="grid-day">2</button>
-              <button class="grid-day">3</button>
-              <button class="grid-day">4</button>
-              <button class="grid-day">5</button>
-
-              <button class="grid-day">6</button>
-              <button class="grid-day event">7</button>
-              <button class="grid-day">8</button>
-              <button class="grid-day selected">9</button>
-              <button class="grid-day event">10</button>
-              <button class="grid-day">11</button>
-              <button class="grid-day">12</button>
-
-              <button class="grid-day event">13</button>
-              <button class="grid-day">14</button>
-              <button class="grid-day">15</button>
-              <button class="grid-day event">16</button>
-              <button class="grid-day">17</button>
-              <button class="grid-day">18</button>
-              <button class="grid-day">19</button>
-            </div>
-          </div>
+          <div class="split-copy"><span class="eyebrow accent">Event discovery</span><h2 id="calendar-title">See all events in one place, without missing the important ones.</h2><p>Search by association, date, type, or venue. Event details include location, description, media uploads, and organizer information for quick access.</p><ul class="check-list"><li>Association and department event posting</li><li>Clear views for academic and social events</li><li>Media support for posters and promotional content</li></ul></div>
+          <div class="calendar-surface card" aria-label="Campus event calendar preview"><div class="day-row"><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span></div><div class="date-grid"><button class="grid-day muted" type="button">30</button><button class="grid-day muted" type="button">31</button><button class="grid-day" type="button">1</button><button class="grid-day" type="button">2</button><button class="grid-day" type="button">3</button><button class="grid-day" type="button">4</button><button class="grid-day" type="button">5</button><button class="grid-day" type="button">6</button><button class="grid-day event" type="button">7</button><button class="grid-day" type="button">8</button><button class="grid-day selected" type="button">9</button><button class="grid-day event" type="button">10</button><button class="grid-day" type="button">11</button><button class="grid-day" type="button">12</button><button class="grid-day event" type="button">13</button><button class="grid-day" type="button">14</button><button class="grid-day" type="button">15</button><button class="grid-day event" type="button">16</button><button class="grid-day" type="button">17</button><button class="grid-day" type="button">18</button><button class="grid-day" type="button">19</button></div></div>
         </div>
       </section>
 
-      <section class="section planner" id="schedule">
-        <div class="container planner-inner">
-          <div class="planner-head">
-            <span class="eyebrow accent">Weekly planning</span>
-            <h2>Structure your week around class, events, and goals.</h2>
-          </div>
+      <section class="section planner" id="schedule" aria-labelledby="schedule-title"><div class="container planner-inner"><div class="planner-head"><span class="eyebrow accent">Weekly planning</span><h2 id="schedule-title">Structure your week around class, events, and goals.</h2></div><div class="planner-board card"><div class="planner-header-row"><span>Time</span><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span></div><div class="planner-grid"><div class="slot time">9:00</div><div class="slot"></div><div class="slot plan">Study Session</div><div class="slot"></div><div class="slot"></div><div class="slot plan">Lab Work</div><div class="slot"></div><div class="slot time">12:00</div><div class="slot"></div><div class="slot"></div><div class="slot plan">Lunch &amp; Review</div><div class="slot"></div><div class="slot"></div><div class="slot"></div><div class="slot time">15:00</div><div class="slot plan">Club Meeting</div><div class="slot"></div><div class="slot"></div><div class="slot plan">Project Check-in</div><div class="slot"></div><div class="slot"></div><div class="slot time">18:00</div><div class="slot"></div><div class="slot"></div><div class="slot plan">Event Night</div><div class="slot"></div><div class="slot plan">Campus Mixer</div><div class="slot"></div></div></div></div></section>
 
-          <div class="planner-board card">
-            <div class="planner-header-row">
-              <span>Time</span>
-              <span>Mon</span>
-              <span>Tue</span>
-              <span>Wed</span>
-              <span>Thu</span>
-              <span>Fri</span>
-              <span>Sat</span>
-            </div>
+      <section class="section notifications" id="notifications" aria-labelledby="notifications-title"><div class="container notification-wrap"><div class="notification-summary"><span class="eyebrow accent">Smart notifications</span><h2 id="notifications-title">Receive updates only from the student groups you care about.</h2><p>Choose your preferred associations and receive reminders before events happen, without the noise from unrelated groups.</p></div><div class="notification-list card"><div class="toggle-row"><span>Media Club</span><label class="switch"><input type="checkbox" checked /><span class="slider"></span></label></div><div class="toggle-row"><span>Student Union</span><label class="switch"><input type="checkbox" checked /><span class="slider"></span></label></div><div class="toggle-row"><span>Robotics Society</span><label class="switch"><input type="checkbox" /><span class="slider"></span></label></div><div class="toggle-row"><span>Arts Council</span><label class="switch"><input type="checkbox" checked /><span class="slider"></span></label></div><div class="toggle-row"><span>Volunteering Team</span><label class="switch"><input type="checkbox" /><span class="slider"></span></label></div></div></div></section>
 
-            <div class="planner-grid">
-              <div class="slot time">9:00</div>
-              <div class="slot"></div>
-              <div class="slot plan">Study Session</div>
-              <div class="slot"></div>
-              <div class="slot"></div>
-              <div class="slot plan">Lab Work</div>
-              <div class="slot"></div>
-
-              <div class="slot time">12:00</div>
-              <div class="slot"></div>
-              <div class="slot"></div>
-              <div class="slot plan">Lunch & Review</div>
-              <div class="slot"></div>
-              <div class="slot"></div>
-              <div class="slot"></div>
-
-              <div class="slot time">15:00</div>
-              <div class="slot plan">Club Meeting</div>
-              <div class="slot"></div>
-              <div class="slot"></div>
-              <div class="slot plan">Project Check-in</div>
-              <div class="slot"></div>
-              <div class="slot"></div>
-
-              <div class="slot time">18:00</div>
-              <div class="slot"></div>
-              <div class="slot"></div>
-              <div class="slot plan">Event Night</div>
-              <div class="slot"></div>
-              <div class="slot plan">Campus Mixer</div>
-              <div class="slot"></div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="section notifications" id="notifications">
-        <div class="container notification-wrap">
-          <div class="notification-summary">
-            <span class="eyebrow accent">Smart notifications</span>
-            <h2>Receive updates only from the student groups you care about.</h2>
-            <p>
-              Choose your preferred associations and receive reminders before events happen,
-              without the noise from unrelated groups.
-            </p>
-          </div>
-
-          <div class="notification-list card">
-            <div class="toggle-row">
-              <span>Media Club</span>
-              <label class="switch"><input type="checkbox" checked /><span class="slider"></span></label>
-            </div>
-            <div class="toggle-row">
-              <span>Student Union</span>
-              <label class="switch"><input type="checkbox" checked /><span class="slider"></span></label>
-            </div>
-            <div class="toggle-row">
-              <span>Robotics Society</span>
-              <label class="switch"><input type="checkbox" /><span class="slider"></span></label>
-            </div>
-            <div class="toggle-row">
-              <span>Arts Council</span>
-              <label class="switch"><input type="checkbox" checked /><span class="slider"></span></label>
-            </div>
-            <div class="toggle-row">
-              <span>Volunteering Team</span>
-              <label class="switch"><input type="checkbox" /><span class="slider"></span></label>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="section cta-band">
-        <div class="container cta-box">
-          <div>
-            <span class="eyebrow">Official campus access</span>
-            <h2>Join the Unitech Social Calendar today.</h2>
-          </div>
-          <button class="btn btn-primary">Register with school email</button>
-        </div>
-      </section>
+      <section class="section cta-band"><div class="container cta-box"><div><span class="eyebrow">Official campus access</span><h2>Join the Unitech Social Calendar today.</h2></div><button class="btn btn-primary" type="button">Register with school email</button></div></section>
     </main>
 
-    <footer class="site-footer">
-      <div class="container footer-inner">
-        <div>
-          <div class="brand footer-brand">
-            <div class="brand-mark footer-logo" aria-label="Papua New Guinea University of Technology logo">
-              <svg class="unitech-logo" viewBox="0 0 200 200" role="img" aria-label="Papua New Guinea University of Technology logo">
-                <rect x="10" y="10" width="180" height="180" rx="32" fill="#b71d2d" stroke="#f5f5f5" stroke-width="12" />
-                <g fill="none" stroke="#f4f4f4" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" opacity="0.96">
-                  <path d="M60 125c0-27 17-47 42-47 27 0 44 21 44 49 0 24-16 38-39 38-23 0-39-15-39-40Z" />
-                  <path d="M72 84c0 18 10 30 26 30 16 0 28-12 28-30 0-18-12-30-28-30-15 0-26 12-26 30Z" />
-                  <path d="M102 62c10 0 17 8 17 18 0 11-7 20-18 20-10 0-18-9-18-20 0-10 8-18 19-18Z" />
-                </g>
-                <g fill="none" stroke="#f1c85d" stroke-width="9" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M46 72c22-12 38 4 48 20 9 15 25 23 47 22" />
-                  <path d="M54 129c20 12 31 13 48 0 17-12 30-10 46 5" />
-                  <path d="M69 58c-4 26 5 48 28 61" />
-                  <path d="M130 62c-2 23-15 46-36 58" />
-                </g>
-              </svg>
-            </div>
-            <div>
-              <span class="brand-name">Unitech</span>
-              <small>Social Calendar</small>
-            </div>
-          </div>
-        </div>
-
-        <div class="footer-links">
-          <a href="#features">Features</a>
-          <a href="#calendar">Calendar</a>
-          <a href="#schedule">Planner</a>
-          <a href="#notifications">Notifications</a>
-        </div>
-
-        <p>© 2026 Papua New Guinea University of Technology</p>
-      </div>
-    </footer>
+    <footer class="site-footer"><div class="container footer-inner"><a class="brand footer-brand" href="#top" aria-label="Back to top"><span class="brand-mark footer-logo" aria-hidden="true"><svg class="unitech-logo" viewBox="0 0 200 200" role="img" aria-label="Papua New Guinea University of Technology logo"><rect x="10" y="10" width="180" height="180" rx="32" fill="#b71d2d" stroke="#f5f5f5" stroke-width="12" /><g fill="none" stroke="#f4f4f4" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"><path d="M60 125c0-27 17-47 42-47 27 0 44 21 44 49 0 24-16 38-39 38-23 0-39-15-39-40Z" /><path d="M72 84c0 18 10 30 26 30 16 0 28-12 28-30 0-18-12-30-28-30-15 0-26 12-26 30Z" /><path d="M102 62c10 0 17 8 17 18 0 11-7 20-18 20-10 0-18-9-18-20 0-10 8-18 19-18Z" /></g><g fill="none" stroke="#f1c85d" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"><path d="M46 72c22-12 38 4 48 20 9 15 25 23 47 22" /><path d="M54 129c20 12 31 13 48 0 17-12 30-10 46 5" /><path d="M69 58c-4 26 5 48 28 61" /><path d="M130 62c-2 23-15 46-36 58" /></g></svg></span><span><strong class="brand-name">Unitech</strong><small>Social Calendar</small></span></a><div class="footer-links"><a href="#features">Features</a><a href="#calendar">Calendar</a><a href="#schedule">Planner</a><a href="#notifications">Notifications</a></div><p>© 2026 Papua New Guinea University of Technology</p></div></footer>
   </body>
 </html>
