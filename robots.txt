@@ -1,0 +1,22 @@
+# Unitech Social Calendar - robots.txt
+# Allow all search engines to crawl the site
+
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /.well-known/
+Disallow: /api/private/
+
+# Specific rules for popular crawlers
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+# Sitemap
+Sitemap: https://example.com/sitemap.xml
+
+# Update domain above when deployed
