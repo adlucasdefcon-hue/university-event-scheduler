@@ -1,0 +1,35 @@
+{
+  "name": "unitech-social-calendar",
+  "version": "1.0.0",
+  "description": "The Papua New Guinea University of Technology campus events, schedules, and notifications hub.",
+  "type": "module",
+  "main": "index.html",
+  "scripts": {
+    "start": "python -m http.server 8000 --directory .",
+    "serve": "npx http-server . -p 8000 -c-1",
+    "build": "echo 'Static site - no build required'",
+    "preview": "npx http-server . -p 8000 -c-1"
+  },
+  "keywords": [
+    "calendar",
+    "events",
+    "university",
+    "student",
+    "schedule",
+    "planner",
+    "notifications"
+  ],
+  "author": "adlucasdefcon-hue",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adlucasdefcon-hue/university-event-scheduler.git"
+  },
+  "bugs": {
+    "url": "https://github.com/adlucasdefcon-hue/university-event-scheduler/issues"
+  },
+  "homepage": "https://github.com/adlucasdefcon-hue/university-event-scheduler#readme",
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}
